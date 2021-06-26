@@ -1164,7 +1164,7 @@ export const calculateHepteractMultiplier = (score = -1) => {
 }
 
 export const calculateTimeAcceleration = () => {
-    let timeMult = 1;
+    let timeMult = 1e6
     timeMult *= (1 + 1 / 300 * Math.log(player.maxobtainium + 1) / Math.log(10) * player.upgrades[70]) //Particle upgrade 2x5
     timeMult *= (1 + player.researches[121] / 50); // research 5x21
     timeMult *= (1 + 0.015 * player.researches[136]) // research 6x11
@@ -1193,7 +1193,6 @@ export const calculateTimeAcceleration = () => {
     if (timeMult > 3600 && player.achievements[242] < 1) {
         achievementaward(242)
     }
-    timeMult *= 1e6
     return (timeMult)
 }
 
