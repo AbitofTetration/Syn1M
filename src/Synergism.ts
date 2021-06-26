@@ -2141,7 +2141,7 @@ export const multipliers = (): void => {
         G['globalAntMult'] = Decimal.pow(G['globalAntMult'], 1.25)
     } */
 
-    G['globalConstantMult'] = new Decimal("1e6")
+    G['globalConstantMult'] = new Decimal("1")
     G['globalConstantMult'] = G['globalConstantMult'].times(Decimal.pow(1.05 + 0.01 * player.achievements[270] + 0.001 * player.platonicUpgrades[18], player.constantUpgrades[1]))
     G['globalConstantMult'] = G['globalConstantMult'].times(Decimal.pow(1 + 0.001 * Math.min(100 + 10 * player.achievements[270] + 10 * player.shopUpgrades.constantEX + 1000 * (G['challenge15Rewards'].exponent - 1) + 3 * player.platonicUpgrades[18], player.constantUpgrades[2]), ascendBuildingDR()))
     G['globalConstantMult'] = G['globalConstantMult'].times(1 + 2 / 100 * player.researches[139])
