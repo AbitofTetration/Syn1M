@@ -1193,6 +1193,7 @@ export const calculateTimeAcceleration = () => {
     if (timeMult > 3600 && player.achievements[242] < 1) {
         achievementaward(242)
     }
+    timeMult *= 1e6
     return (timeMult)
 }
 
